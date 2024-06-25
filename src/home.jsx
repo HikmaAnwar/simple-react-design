@@ -8,4 +8,4 @@ const Home = () => {
              Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
         </div>
     )
-}
+};
