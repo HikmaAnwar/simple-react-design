@@ -6,4 +6,4 @@ const FourOfFour = () => {
     );
   };
   
-  export default FouroFour;
+  export default FourOfFour;

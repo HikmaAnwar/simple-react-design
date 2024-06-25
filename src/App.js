@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Routes, BrowserRouter} from "react-router-dom";
-import 
+import FourOfFour from "./404";
 
 function App() {
   return (
