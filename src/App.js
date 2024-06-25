@@ -10,12 +10,14 @@ function App() {
       <Route 
       path="/" element={<h1>Hello Boptii!</h1>}
       />
-
+      
       <Route 
       path="*" element={<FourOfFour/>}
       />
 
-        </Routes></BrowserRouter></>
+        </Routes>
+        </BrowserRouter>
+        </>
   );
 }
 
