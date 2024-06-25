@@ -1,19 +1,34 @@
 import React from "react";
 import {Route, Routes, BrowserRouter} from "react-router-dom";
 import FourOfFour from "./404";
+import NavBar from "./nav";
+import Home from './Home'; 
+import Login from './Login';
+import SignUp from './SignUp';
+import SourceCode from "./sourcecode";
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <Routes>
+      <NavBar/>
       <Route 
-      path="/" element={<h1>Hello Boptii!</h1>}
+      path="/" element={<Home/>}
       />
-      
+      <Route
+      path="/sourcecode" element={<SourceCode/>}
+      />
+      <Route
+      path="/login" element={<Login/>}
+      />
+      <Route 
+      path="/signup" element={<SignUp/>}
+      />
       <Route 
       path="*" element={<FourOfFour/>}
       />
+      
 
         </Routes>
         </BrowserRouter>
