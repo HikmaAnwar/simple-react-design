@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route 
-      path="/" element={<h1>Hello Worlds</h1>}
+      path="/" element={<h1>Hello Boptii!</h1>}
       />
 
       <Route 
