@@ -3,6 +3,6 @@ const SourceCode = () => {
         <div>
             <h1>sourcecode</h1>
         </div>
-    )
+    );
 };
 export default SourceCode;

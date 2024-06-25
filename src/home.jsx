@@ -7,7 +7,7 @@ const Home = () => {
              Pellentesque vel condimentum ante. Morbi in mauris vel felis malesuada congue.
              Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
         </div>
-    )
+    );
 };
 
 export default Home;
