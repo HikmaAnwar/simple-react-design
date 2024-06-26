@@ -70,7 +70,7 @@ const Login = () => {
                 Don't have an account? <Link to={"/signup"}>Signup</Link>
                 </p>
 
-                <Link to={"/forgot"}>Forgot Password?</Link>
+                <Link to="#" onClick={() => setModalIsOpen(true)}>Forgot Password?</Link>
         </div>
 
 
