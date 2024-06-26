@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
 
-Modal.setAppElement('#root'); // to avoid screen reader issues with modal
+Modal.setAppElement('#root'); 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [forgotEmail, setForgotEmail] = useState('');
-    const [emailError, setEmailError] = useState(false); // State to track if email field is empty
+    const [emailError, setEmailError] = useState(false); 
 
     const handleLogin = () => {
         console.log("You Successfully Logged In!", { email, password });
@@ -19,10 +19,10 @@ const Login = () => {
 
     const handleSendEmail = () => {
         if (!forgotEmail) {
-            setEmailError(true); // Show error message if email is empty
+            setEmailError(true); 
         } else {
             console.log("Forgot password email sent to:", forgotEmail);
-            setEmailError(false); // Hide error message if email is filled
+            setEmailError(false); 
             setForgotEmail('');
             setModalIsOpen(false);
         }
@@ -113,7 +113,7 @@ const Login = () => {
                 isOpen={modalIsOpen}
                 onRequestClose={() => {
                     setModalIsOpen(false);
-                    setEmailError(false); // Reset email error state when modal closes
+                    setEmailError(false); 
                 }}
                 contentLabel="Forgot Password Modal"
                 style={{
@@ -137,7 +137,7 @@ const Login = () => {
                     value={forgotEmail}
                     onChange={(e) => {
                         setForgotEmail(e.target.value);
-                        setEmailError(false); // Hide error message when typing in email field
+                        setEmailError(false); 
                     }}
                     style={inputStyle}
                 />
