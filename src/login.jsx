@@ -71,6 +71,35 @@ const Login = () => {
                 </p>
 
                 <Link to="#" onClick={() => setModalIsOpen(true)}>Forgot Password?</Link>
+
+                <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={() => setModalIsOpen(false)}
+                contentLabel="Forgot Password Modal"
+                style={{
+                    content: {
+                        top: '50%',
+                        left: '50%',
+                        right: 'auto',
+                        bottom: 'auto',
+                        marginRight: '-50%',
+                        transform: 'translate(-50%, -50%)',
+                        padding: '20px',
+                        borderRadius: '8px'
+                    }
+                }}
+            >
+                <h2>Forgot Password</h2>
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={forgotEmail}
+                    onChange={(e) => setForgotEmail(e.target.value)}
+                    style={inputStyle}
+                />
+                <button onClick={handleSendEmail} style={buttonStyle}>Send</button>
+                <button onClick={() => setModalIsOpen(false)} style={{...buttonStyle, backgroundColor: 'gray', marginLeft: '10px'}}>Close</button>
+            </Modal>
         </div>
 
 
