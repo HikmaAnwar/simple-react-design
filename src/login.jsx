@@ -19,10 +19,16 @@ const Login = () => {
     };
 
     const handleSendEmail = () => {
-        console.log("Forgot password email sent to:", {forgotEmail});
-        setForgotEmail('');
-        setModalIsOpen(false);
+        if (forgotEmail.trim() === '') {
+            setIsEmailEmpty(true);
+        } else {
+            console.log("Forgot password email sent to:", forgotEmail);
+            setForgotEmail('');
+            setModalIsOpen(false);
+            setIsEmailEmpty(false);
+        }
     };
+
 
 
     const inputStyle = {
@@ -74,8 +80,11 @@ const Login = () => {
                 <Link to="#" onClick={() => setModalIsOpen(true)}>Forgot Password?</Link>
 
                 <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={() => setModalIsOpen(false)}
+                 isOpen={modalIsOpen}
+                 onRequestClose={() => {
+                     setModalIsOpen(false);
+                     setEmailError(false); 
+                 }}
                 contentLabel="Forgot Password Modal"
                 style={{
                     content: {
@@ -95,9 +104,12 @@ const Login = () => {
                     type="email"
                     placeholder="Enter your email"
                     value={forgotEmail}
-                    onChange={(e) => setForgotEmail(e.target.value)}
+                    onChange={(e) =>{ setForgotEmail(e.target.value);
+                        setEmailError(false);
+                    }}
                     style={inputStyle}
                 />
+                {emailError && <p style={{ color: 'red', marginTop: '5px' }}>Please fill out this field</p>}
                 <button onClick={handleSendEmail} style={buttonStyle}>Send</button>
                 <button onClick={() => setModalIsOpen(false)} style={{...buttonStyle, backgroundColor: 'gray', marginLeft: '10px'}}>Close</button>
             </Modal>
