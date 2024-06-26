@@ -10,6 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [forgotEmail, setForgotEmail] = useState('');
+    const [isEmailEmpty, setIsEmailEmpty] = useState(false);
 
     const handleLogin = () => {
         console.log(" You Successfully Logged In!", {email,password});
@@ -42,7 +43,7 @@ const Login = () => {
         border: 'none',
         borderRadius: '4px',
         cursor: 'pointer',
-        marginTop: '20px'
+        marginBottom: '10px'
     };
 
     return(
