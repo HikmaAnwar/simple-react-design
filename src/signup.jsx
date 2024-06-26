@@ -20,7 +20,7 @@ const SignUp = () => {
 
     return(
         <div>
-            <h1>signup Page</h1>
+            <h1>Sign up</h1>
             <input
             type="text"
             placeholder="Enter Username"
@@ -48,12 +48,13 @@ const SignUp = () => {
             value={password}
             onChange={(e) => setComfirmPassword(e.target.value)}
             />
-            
+
             <button on onClick={handleSignup}>Sign Up</button>
 
-            <p style={{'marginTop': '10px'}}>
-                Already have an account? <Link to={/"login"}>Login</Link>
-            </p>
+            <p style={{marginTop: '10px'}}>Already have an account?
+             <Link to={"/login"}>Login</Link>
+             </p>
+             
         </div>
     );
 };
