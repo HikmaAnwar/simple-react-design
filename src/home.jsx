@@ -17,7 +17,7 @@ const Home = () => {
              Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
             <p>Register Here:</p>
            
-             <Button to="/signup" onClick={handeleButtonClick}>Sign Up</Button>
+             <Link to="/signup" onClick={handeleButtonClick}>Sign Up</Link>
         </div>
 
         
