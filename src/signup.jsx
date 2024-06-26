@@ -13,13 +13,47 @@ const SignUp = () => {
         setEmail('');
         setPassword('');
         setComfirmPassword('');
-    }
+    };
+
+
 
 
     return(
         <div>
             <h1>signup Page</h1>
+            <input
+            type="text"
+            placeholder="Enter Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            />
+
+            <input
+            type="email"
+            placeholder="Enter Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <input
+            type="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <input
+            type="password"
+            placeholder="Confirm Password "
+            value={password}
+            onChange={(e) => setComfirmPassword(e.target.value)}
+            />
             
+            <button on onClick={handleSignup}>Sign Up</button>
+
+            <p style={{'marginTop': '10px'}}>
+                Already have an account? <Link to={/"login"}>Login</Link>
+            </p>
         </div>
     );
 };
