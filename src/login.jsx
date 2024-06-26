@@ -1,15 +1,28 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from "react-modal";
+
+Modal.setAppElement('#root'); // to avoid screen reader issues with modal
+
 const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [forgotEmail, setForgotEmail] = useState('');
 
     const handleLogin = () => {
         console.log(" You Successfully Logged In!", {email,password});
         setEmail('');
         setPassword('');
     };
+
+    const handleSendEmail = () => {
+        console.log("Forgot password email sent to:", {forgotEmail});
+        setForgotEmail('');
+        setModalIsOpen(false);
+    };
+
 
     const inputStyle = {
         marginBottom: '10px',
