@@ -15,7 +15,25 @@ const SignUp = () => {
         setComfirmPassword('');
     };
 
+    const inputStyle = {
+        marginBottom: '10px',
+        padding: '8px',
+        fontSize: '16px',
+        border: '1px solid #ccc',
+        borderRadius: '4px',
+        width: '100%'
+      };
 
+      const buttonStyle = {
+        padding: '10px 20px',
+        fontSize: '16px',
+        color: 'white',
+        backgroundColor: '#007BFF',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        marginTop: '10px'
+      };
 
 
     return(
@@ -26,6 +44,7 @@ const SignUp = () => {
             placeholder="Enter Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            style={inputStyle}
             />
 
             <input
@@ -33,6 +52,7 @@ const SignUp = () => {
             placeholder="Enter Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            style={inputStyle}
             />
 
             <input
@@ -40,6 +60,7 @@ const SignUp = () => {
             placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            style={inputStyle}
             />
 
             <input
@@ -47,14 +68,15 @@ const SignUp = () => {
             placeholder="Confirm Password "
             value={password}
             onChange={(e) => setComfirmPassword(e.target.value)}
+            style={inputStyle}
             />
 
-            <button on onClick={handleSignup}>Sign Up</button>
+            <button on onClick={handleSignup} style={buttonStyle}>Sign Up</button>
 
             <p style={{marginTop: '10px'}}>Already have an account?
              <Link to={"/login"}>Login</Link>
              </p>
-             
+
         </div>
     );
 };
