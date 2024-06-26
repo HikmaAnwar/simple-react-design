@@ -25,11 +25,11 @@ const Login = () => {
         padding: '10px 20px',
         fontSize: '16px',
         color: 'white',
-        backgroundColor: '#007BFF',
+        backgroundColor: 'pink',
         border: 'none',
         borderRadius: '4px',
         cursor: 'pointer',
-        marginTop: '10px'
+        marginTop: '20px'
     };
 
     return(
