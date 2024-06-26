@@ -21,7 +21,7 @@ const SignUp = () => {
         fontSize: '16px',
         border: '1px solid #ccc',
         borderRadius: '4px',
-        width: '100%'
+        width: '50%'
       };
 
       const buttonStyle = {
