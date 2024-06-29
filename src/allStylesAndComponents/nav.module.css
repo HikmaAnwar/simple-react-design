@@ -2,15 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: white;
     padding: 10px 20px;
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .navbarBrand a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
+    color: lightseagreen;
+    text-decoration:none;
+    font-size: 40px;
 }
 
 .navbarLinks {
@@ -25,7 +26,7 @@
 }
 
 .navbarLinks a {
-    color: white;
+    color: gray;
     text-decoration: none;
     font-size: 18px;
 }
