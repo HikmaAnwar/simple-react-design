@@ -52,7 +52,7 @@ const Login = () => {
                 
             />
 
-            <button className={styles.loginbutton} onClick={handleLogin} >Login</button>
+            <button className={styles.logbutton} onClick={handleLogin} >Login</button>
 
             <p style={{ marginTop: '10px' }}>
                 Don't have an account? <Link to={"/signup"}>Signup</Link>

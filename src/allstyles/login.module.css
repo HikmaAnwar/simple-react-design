@@ -1,6 +1,30 @@
 /* login.module.css */
 
-.inputemail {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image {
+    flex: 1;
+    background: url('C:\Users\HP\Documents\GitHub\simple-react-design\src\allstyles\login.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.form {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input1, .input2, .input3 {
     width: 100%;
     padding: 8px;
     margin: 8px 0;
@@ -9,33 +33,18 @@
     border-radius: 4px;
 }
 
-.inputpassword {
+.logbutton, .sendbutton, .closebutton {
     width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.inputforgotemail {
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.logbutton {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
     padding: 10px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    color: white;
+}
+
+.logbutton {
+    background-color: #4CAF50;
 }
 
 .logbutton:hover {
@@ -43,14 +52,7 @@
 }
 
 .sendbutton {
-    width: 100%;
     background-color: #008CBA;
-    color: white;
-    padding: 10px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .sendbutton:hover {
@@ -58,14 +60,7 @@
 }
 
 .closebutton {
-    width: 100%;
     background-color: #f44336;
-    color: white;
-    padding: 10px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .closebutton:hover {
