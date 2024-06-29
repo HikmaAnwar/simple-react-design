@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
-import inputStyle1 from "./login.module.css";
-import buttonStyle1 from "./login.module.css";
-import inputStyle from "./login.module.css";
-import buttonStyle from "./login.module.css";
-import closeButtonStyle from "./login.module.css";
+import styles from "./login.module.css";
+
 
 
 Modal.setAppElement('#root'); 
@@ -39,7 +36,7 @@ const Login = () => {
         <div>
             <h1>LogIn</h1>
             <input
-                className={inputStyle1.input1}
+                className={styles.inputStyle1}
                 type="email"
                 placeholder="Enter email"
                 value={email}
@@ -47,7 +44,7 @@ const Login = () => {
                
             />
 
-            <input className={inputStyle1.input2}
+            <input className={styles.inputStyle1}
                 type="password"
                 placeholder="Enter password"
                 value={password}
@@ -55,7 +52,7 @@ const Login = () => {
                 
             />
 
-            <button className={buttonStyle1.logbutton} onClick={handleLogin} >Login</button>
+            <button className={styles.buttonStyle1} onClick={handleLogin} >Login</button>
 
             <p style={{ marginTop: '10px' }}>
                 Don't have an account? <Link to={"/signup"}>Signup</Link>
@@ -85,7 +82,7 @@ const Login = () => {
                 }}
             >
                 <h2>Forgot Password</h2>
-                <input className={inputStyle.input3}
+                <input className={styles.inputStyle}
                     type="email"
                     placeholder="Enter your email"
                     value={forgotEmail}
@@ -96,8 +93,8 @@ const Login = () => {
                     
                 />
                 {emailError && <p style={{ color: 'red', marginTop: '5px' }}>Please fill out this field</p>}
-                <button className={buttonStyle.sendbutton} onClick={handleSendEmail} >Send</button>
-                <button className={closeButtonStyle.closebutton} onClick={() => setModalIsOpen(false)} >Close Modal</button>
+                <button className={styles.buttonStyle} onClick={handleSendEmail} >Send</button>
+                <button className={styles.closeButtonStyle} onClick={() => setModalIsOpen(false)} >Close Modal</button>
             </Modal>
         </div>
     );
