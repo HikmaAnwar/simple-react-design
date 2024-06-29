@@ -31,7 +31,7 @@
 
 .logbutton, .sendbutton, .closebutton {
     width: 100%;
-    color: white;
+    color:black;
     padding: 10px;
     margin: 8px 0;
     border: none;
@@ -40,23 +40,19 @@
 }
 
 .logbutton {
-    background-color:darkblue;
+    background-color:orange;
 }
 
-.logbutton:hover {
-    background-color: lightblue;
-}
+
 
 .sendbutton {
-    background-color:darkblue;
+    background-color:orange;
 }
 
-.sendbutton:hover {
-    background-color: lightblue;
-}
+
 
 .closebutton {
-    background-color: lightblue;
+    background-color:beige;
 }
 
 
