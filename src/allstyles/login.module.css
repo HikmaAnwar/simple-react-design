@@ -7,6 +7,17 @@
     width: 50%;
   };
 
+  .buttonStyle1{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: pink;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  };
+
   .inputStyle{
     margin-top: 10px;
     padding: 8px;

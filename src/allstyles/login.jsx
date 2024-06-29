@@ -36,16 +36,7 @@ const Login = () => {
 
     
     
-    const buttonStyle1 = {
-        padding: '10px 20px',
-        fontSize: '16px',
-        color: 'white',
-        backgroundColor: 'pink',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
-        marginTop: '10px'
-      };
+   
 
 
     
