@@ -4,30 +4,30 @@ import myHomeImage from "./home.jpg";
 import styles from "./home.module.css";
 
 const Home = () => {
-    const [buttonClicked, setButtonClicked] =useState(false);
+    const [buttonClicked, setButtonClicked] = useState(false);
 
-    const handeleButtonClick = () =>{
+    const handleButtonClick = () => {
         setButtonClicked(true);
     };
 
-    return(
+    return (
         <div className={styles.container}>
             <div className={styles.paragraph}>
-            <h1>We Train Best Standards of Responsive Websites And Apps</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at quam finibus,
-             rutrum leo pulvinar, pretium ligula. Maecenas consectetur sit amet quam at tincidunt.
-             Pellentesque vel condimentum ante. Morbi in mauris vel felis malesuada congue.
-             Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
-             </div>
-            <p>Register Here:</p>
-            <div className={styles.imageContainer}>
-                <img src = {myHomeImage} />
+                <h1>We Train Best Standards of Responsive Websites And Apps</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at quam finibus,
+                rutrum leo pulvinar, pretium ligula. Maecenas consectetur sit amet quam at tincidunt.
+                Pellentesque vel condimentum ante. Morbi in mauris vel felis malesuada congue.
+                Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
+                <p>Register Here:</p>
+                <button onClick={handleButtonClick}>
+                    <Link to="/signup">Sign Up</Link>
+                </button>
             </div>
-           
-             <button> <Link to="/signup" onClick={handeleButtonClick}>Sign Up</Link></button>
-        </div>
 
-        
+            <div className={styles.imageContainer}>
+                <img src={myHomeImage} alt="Home" />
+            </div>
+        </div>
     );
 };
 
