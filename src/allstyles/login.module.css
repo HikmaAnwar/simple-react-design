@@ -1,52 +1,73 @@
- .inputStyle1{
-    margin-top: 10px;
+/* login.module.css */
+
+.inputemail {
+    width: 100%;
     padding: 8px;
-    font-size: 16px;
+    margin: 8px 0;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 50%;
-  };
+}
 
-  .buttonStyle1{
-    padding: 10px 20px;
-    font-size: 16px;
+.inputpassword {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inputforgotemail {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.logbutton {
+    width: 100%;
+    background-color: #4CAF50;
     color: white;
-    background-color: pink;
+    padding: 10px;
+    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
-  };
+}
 
-  .inputStyle{
-    margin-top: 10px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.logbutton:hover {
+    background-color: #45a049;
+}
+
+.sendbutton {
     width: 100%;
-};
-
- .buttonStyle{
-    padding: 10px 20px;
-    font-Size: 16px;
+    background-color: #008CBA;
     color: white;
-    background-color: pink;
-    border: 'none';
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
-};
-
- .closeButtonStyle{
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color:pink;
+    padding: 10px;
+    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+}
+
+.sendbutton:hover {
+    background-color: #007B9A;
+}
+
+.closebutton {
     width: 100%;
-};
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.closebutton:hover {
+    background-color: #e53935;
+}
