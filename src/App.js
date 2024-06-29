@@ -4,7 +4,7 @@ import FourOfFour from "./404";
 import NavBar from "./allStylesAndComponents/nav";
 import Home from './allStylesAndComponents/home'; 
 import Login from './allStylesAndComponents/login';
-import SignUp from './signup';
+import SignUp from './allStylesAndComponents/signup';
 import SourceCode from "./sourcecode";
 
 
