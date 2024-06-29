@@ -22,12 +22,12 @@ const Home = () => {
                 <button onClick={handleButtonClick}>
                     <Link to="/signup">Sign Up</Link>
                 </button>
-                
+
                 </p>
             </div>
 
             <div className={styles.imageContainer}>
-                <img src={myHomeImage}  />
+                <img src={myHomeImage} alt='female image' />
             </div>
         </div>
     );
