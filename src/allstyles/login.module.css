@@ -16,26 +16,26 @@
     width: 100%;
 };
 
-const buttonStyle = {
-    padding: '10px 20px',
-    fontSize: '16px',
-    color: 'white',
-    backgroundColor: 'pink',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    marginTop: '20px',
-    width: '100%'
+ .buttonStyle{
+    padding: 10px 20px;
+    font-Size: 16px;
+    color: white;
+    background-color: pink;
+    border: 'none';
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
 };
 
-const closeButtonStyle = {
-    padding: '10px 20px',
-    fontSize: '16px',
-    color: 'white',
-    backgroundColor: 'gray',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    marginTop: '10px',
-    width: '100%'
+ .closeButtonStyle{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
 };
