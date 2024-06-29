@@ -28,14 +28,7 @@ const Login = () => {
         }
     };
 
-    const inputStyle1 = {
-        marginBottom: '10px',
-        padding: '8px',
-        fontSize: '16px',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        width: '50%'
-      };
+    
     
     const buttonStyle1 = {
         padding: '10px 20px',
