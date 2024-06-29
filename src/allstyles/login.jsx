@@ -44,7 +44,7 @@ const Login = () => {
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                style={inputStyle1}
+               
             />
 
             <input className={inputStyle1.input2}
@@ -52,10 +52,10 @@ const Login = () => {
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                style={inputStyle1}
+                
             />
 
-            <button className={buttonStyle1.logbutton} onClick={handleLogin} style={buttonStyle1}>Login</button>
+            <button className={buttonStyle1.logbutton} onClick={handleLogin} >Login</button>
 
             <p style={{ marginTop: '10px' }}>
                 Don't have an account? <Link to={"/signup"}>Signup</Link>
@@ -93,11 +93,11 @@ const Login = () => {
                         setForgotEmail(e.target.value);
                         setEmailError(false); 
                     }}
-                    style={inputStyle}
+                    
                 />
                 {emailError && <p style={{ color: 'red', marginTop: '5px' }}>Please fill out this field</p>}
-                <button className={buttonStyle.sendbutton} onClick={handleSendEmail} style={buttonStyle}>Send</button>
-                <button className={closeButtonStyle.closebutton} onClick={() => setModalIsOpen(false)} style={closeButtonStyle}>Close Modal</button>
+                <button className={buttonStyle.sendbutton} onClick={handleSendEmail} >Send</button>
+                <button className={closeButtonStyle.closebutton} onClick={() => setModalIsOpen(false)} >Close Modal</button>
             </Modal>
         </div>
     );
