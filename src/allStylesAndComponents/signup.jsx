@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import mySignupImage from "./login.jpg";
+import styles from "./signup.module.css";
 
 const SignUp = () => {
     const [username, setUsername] = useState('');
@@ -15,29 +17,19 @@ const SignUp = () => {
         setComfirmPassword('');
     };
 
-    const inputStyle = {
-        marginBottom: '10px',
-        padding: '8px',
-        fontSize: '16px',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        width: '50%'
-      };
+    
 
-      const buttonStyle = {
-        padding: '10px 20px',
-        fontSize: '16px',
-        color: 'white',
-        backgroundColor: 'pink',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
-        marginTop: '10px'
-      };
+      
 
 
     return(
-        <div>
+        <div className={styles.container}>
+          
+          <div className={styles.imageContainer}>
+            <img src={mySignupImage} />          
+            </div>
+
+            <div className={styles.formContainer}>
             <h1>Sign up</h1>
             <input
             type="text"
@@ -77,6 +69,7 @@ const SignUp = () => {
              <Link to={"/login"}>Login</Link>
              </p>
 
+        </div>
         </div>
     );
 };
