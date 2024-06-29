@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
 import inputStyle1 from "./login.module.css";
+import buttonStyle1 from "./login.module.css";
+import inputStyle from "./login.module.css";
+import buttonStyle from "./login.module.css";
+import closeButtonStyle from "./login.module.css";
 
 
 Modal.setAppElement('#root'); 
