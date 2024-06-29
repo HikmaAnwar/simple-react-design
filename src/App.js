@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Routes, BrowserRouter} from "react-router-dom";
 import FourOfFour from "./404";
 import NavBar from "./allStylesAndComponents/nav";
-import Home from './home'; 
+import Home from './allStylesAndComponents/home'; 
 import Login from './allStylesAndComponents/login';
 import SignUp from './signup';
 import SourceCode from "./sourcecode";
