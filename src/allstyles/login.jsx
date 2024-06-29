@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
+import inputStyle1 from "./login.module.css";
+
 
 Modal.setAppElement('#root'); 
 
@@ -79,6 +81,7 @@ const Login = () => {
         <div>
             <h1>LogIn</h1>
             <input
+                className={inputStyle1.inputts}
                 type="email"
                 placeholder="Enter email"
                 value={email}
