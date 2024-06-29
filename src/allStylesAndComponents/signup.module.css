@@ -23,11 +23,12 @@
 .inputemail, .inputpassword, .inputusername, .inputconfirmpassword {
    
     width: 100%;
-    padding: 8px;
+    padding: 10px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    
 }
 
 .signupbutton {
