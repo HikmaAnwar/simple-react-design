@@ -39,7 +39,7 @@ const Login = () => {
         <div>
             <h1>LogIn</h1>
             <input
-                className={inputStyle1.inputts}
+                className={inputStyle1.input1}
                 type="email"
                 placeholder="Enter email"
                 value={email}
@@ -47,7 +47,7 @@ const Login = () => {
                 style={inputStyle1}
             />
 
-            <input className={inputStyle1.inputts}
+            <input className={inputStyle1.input2}
                 type="password"
                 placeholder="Enter password"
                 value={password}
@@ -55,7 +55,7 @@ const Login = () => {
                 style={inputStyle1}
             />
 
-            <button className={buttonStyle1.button} onClick={handleLogin} style={buttonStyle1}>Login</button>
+            <button className={buttonStyle1.logbutton} onClick={handleLogin} style={buttonStyle1}>Login</button>
 
             <p style={{ marginTop: '10px' }}>
                 Don't have an account? <Link to={"/signup"}>Signup</Link>
