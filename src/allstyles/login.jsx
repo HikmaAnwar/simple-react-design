@@ -85,7 +85,7 @@ const Login = () => {
                 }}
             >
                 <h2>Forgot Password</h2>
-                <input
+                <input className={inputStyle.input3}
                     type="email"
                     placeholder="Enter your email"
                     value={forgotEmail}
@@ -96,8 +96,8 @@ const Login = () => {
                     style={inputStyle}
                 />
                 {emailError && <p style={{ color: 'red', marginTop: '5px' }}>Please fill out this field</p>}
-                <button onClick={handleSendEmail} style={buttonStyle}>Send</button>
-                <button onClick={() => setModalIsOpen(false)} style={closeButtonStyle}>Close Modal</button>
+                <button className={buttonStyle.sendbutton} onClick={handleSendEmail} style={buttonStyle}>Send</button>
+                <button className={closeButtonStyle.closebutton} onClick={() => setModalIsOpen(false)} style={closeButtonStyle}>Close Modal</button>
             </Modal>
         </div>
     );
