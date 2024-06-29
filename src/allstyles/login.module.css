@@ -7,4 +7,35 @@
     width: 50%;
   };
 
-  
+  const inputStyle = {
+    marginBottom: '10px',
+    padding: '8px',
+    fontSize: '16px',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    width: '100%'
+};
+
+const buttonStyle = {
+    padding: '10px 20px',
+    fontSize: '16px',
+    color: 'white',
+    backgroundColor: 'pink',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    marginTop: '20px',
+    width: '100%'
+};
+
+const closeButtonStyle = {
+    padding: '10px 20px',
+    fontSize: '16px',
+    color: 'white',
+    backgroundColor: 'gray',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    marginTop: '10px',
+    width: '100%'
+};
