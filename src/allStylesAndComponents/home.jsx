@@ -18,14 +18,16 @@ const Home = () => {
                 rutrum leo pulvinar, pretium ligula. Maecenas consectetur sit amet quam at tincidunt.
                 Pellentesque vel condimentum ante. Morbi in mauris vel felis malesuada congue.
                 Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
-                <p>Register Here:</p>
+                <p>Register Here:
                 <button onClick={handleButtonClick}>
                     <Link to="/signup">Sign Up</Link>
                 </button>
+                
+                </p>
             </div>
 
             <div className={styles.imageContainer}>
-                <img src={myHomeImage} alt="Home" />
+                <img src={myHomeImage}  />
             </div>
         </div>
     );
