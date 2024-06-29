@@ -18,13 +18,9 @@ const SignUp = () => {
     };
 
     
-
-      
-
-
     return(
         <div className={styles.container}>
-          
+
           <div className={styles.imageContainer}>
             <img src={mySignupImage} />          
             </div>
@@ -32,38 +28,42 @@ const SignUp = () => {
             <div className={styles.formContainer}>
             <h1>Sign up</h1>
             <input
+            className={styles.inputusername}
             type="text"
             placeholder="Enter Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            style={inputStyle}
+            
             />
 
             <input
+            className={styles.inputemail}
             type="email"
             placeholder="Enter Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={inputStyle}
+            
             />
 
             <input
+            className={styles.inputpassword}
             type="password"
             placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={inputStyle}
+            
             />
 
             <input
+            className={styles.inputconfirmpassword}
             type="password"
             placeholder="Confirm Password "
             value={password}
             onChange={(e) => setComfirmPassword(e.target.value)}
-            style={inputStyle}
+            
             />
 
-            <button on onClick={handleSignup} style={buttonStyle}>Sign Up</button>
+            <button on className={styles.signupbutton} onClick={handleSignup} >Sign Up</button>
 
             <p style={{marginTop: '10px'}}>Already have an account?
              <Link to={"/login"}>Login</Link>
