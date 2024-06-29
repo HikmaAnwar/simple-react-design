@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
-import styles from "./login.module.css";
-
-
+import styles from "./login.module.css"; 
+import myImage from "./login.jpg"
 
 Modal.setAppElement('#root'); 
 
@@ -31,34 +30,34 @@ const Login = () => {
         }
     };
 
-    
     return (
-        <div>
-            <h1>LogIn</h1>
-            <input
-                className={styles.inputemail}
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-               
-            />
+        <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src={myImage}  />
+            </div>
 
-            <input className={styles.inputpassword}
-                type="password"
-                placeholder="Enter password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                
-            />
-
-            <button className={styles.logbutton} onClick={handleLogin} >Login</button>
-
-            <p style={{ marginTop: '10px' }}>
-                Don't have an account? <Link to={"/signup"}>Signup</Link>
-            </p>
-
-            <Link to="#" onClick={() => setModalIsOpen(true)}>Forgot Password?</Link>
+            <div className={styles.formContainer}>
+                <h1>LogIn</h1>
+                <input
+                    className={styles.inputemail}
+                    type="email"
+                    placeholder="Enter email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    className={styles.inputpassword}
+                    type="password"
+                    placeholder="Enter password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className={styles.logbutton} onClick={handleLogin}>Login</button>
+                <p style={{ marginTop: '10px' }}>
+                    Don't have an account? <Link to={"/signup"}>Signup</Link>
+                </p>
+                <Link to="#" onClick={() => setModalIsOpen(true)}>Forgot Password?</Link>
+            </div>
 
             <Modal
                 isOpen={modalIsOpen}
@@ -82,7 +81,8 @@ const Login = () => {
                 }}
             >
                 <h2>Forgot Password</h2>
-                <input className={styles.inputforgotemail}
+                <input
+                    className={styles.inputforgotemail}
                     type="email"
                     placeholder="Enter your email"
                     value={forgotEmail}
@@ -90,11 +90,10 @@ const Login = () => {
                         setForgotEmail(e.target.value);
                         setEmailError(false); 
                     }}
-                    
                 />
                 {emailError && <p style={{ color: 'red', marginTop: '5px' }}>Please fill out this field</p>}
-                <button className={styles.sendbutton} onClick={handleSendEmail} >Send</button>
-                <button className={styles.closebutton} onClick={() => setModalIsOpen(false)} >Close Modal</button>
+                <button className={styles.sendbutton} onClick={handleSendEmail}>Send</button>
+                <button className={styles.closebutton} onClick={() => setModalIsOpen(false)}>Close Modal</button>
             </Modal>
         </div>
     );
