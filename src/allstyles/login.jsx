@@ -35,12 +35,6 @@ const Login = () => {
     };
 
     
-    
-   
-
-
-    
-
     return (
         <div>
             <h1>LogIn</h1>
@@ -53,7 +47,7 @@ const Login = () => {
                 style={inputStyle1}
             />
 
-            <input
+            <input className={inputStyle1.inputts}
                 type="password"
                 placeholder="Enter password"
                 value={password}
@@ -61,7 +55,7 @@ const Login = () => {
                 style={inputStyle1}
             />
 
-            <button onClick={handleLogin} style={buttonStyle1}>Login</button>
+            <button className={buttonStyle1.button} onClick={handleLogin} style={buttonStyle1}>Login</button>
 
             <p style={{ marginTop: '10px' }}>
                 Don't have an account? <Link to={"/signup"}>Signup</Link>
