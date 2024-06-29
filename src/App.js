@@ -3,7 +3,7 @@ import {Route, Routes, BrowserRouter} from "react-router-dom";
 import FourOfFour from "./404";
 import NavBar from "./nav";
 import Home from './home'; 
-import Login from './allstyles/login';
+import Login from './allStylesAndComponents/login';
 import SignUp from './signup';
 import SourceCode from "./sourcecode";
 
