@@ -26,7 +26,7 @@ const SignUp = () => {
             </div>
 
             <div className={styles.formContainer}>
-            <h1>Sign up</h1>
+            <h1 style={{margin:'auto', marginTop:'-50px',marginBottom:'50px', marginLeft:'200px', textDecoration:'underline'}}>Sign up</h1>
             <input
             className={styles.inputusername}
             type="text"
