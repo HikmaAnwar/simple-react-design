@@ -20,7 +20,7 @@ const Home = () => {
                 Morbi blandit porttitor odio vel consequat. Nulla gravida quis lorem vitae hendrerit.</p>
                 <p>Register Here:
                 <button onClick={handleButtonClick}>
-                    <Link to="/signup">Sign Up</Link>
+                    <Link to="/signup" >Sign Up</Link>
                 </button>
 
                 </p>
