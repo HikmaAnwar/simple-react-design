@@ -53,10 +53,10 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button className={styles.logbutton} onClick={handleLogin}>Login</button>
-                <p style={{ marginTop: '10px' }}>
-                    Don't have an account? <Link to={"/signup"}>Signup</Link>
+                <p style={{marginTop: '30px', marginLeft:'160px'}}>
+                    Don't have an account? <Link to={"/signup"} style={{marginLeft:'4px', textDecoration:'none', color:'seagreen'}}>Signup</Link>
                 </p>
-                <Link to="#" onClick={() => setModalIsOpen(true)}>Forgot Password?</Link>
+                <Link to="#" onClick={() => setModalIsOpen(true)} style={{marginTop: '30px', marginLeft:'201px', textDecoration:'none', color:'seagreen'}}>Forgot Password?</Link>
             </div>
 
             <Modal
