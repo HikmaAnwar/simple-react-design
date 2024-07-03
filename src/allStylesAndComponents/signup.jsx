@@ -26,7 +26,7 @@ const SignUp = () => {
             </div>
 
             <div className={styles.formContainer}>
-            <h1 style={{margin:'auto', marginTop:'-40px',marginBottom:'50px', marginLeft:'200px', textDecoration:'underline'}}>Signup</h1>
+            <h1>Signup</h1>
             <input
             className={styles.inputusername}
             type="text"
@@ -65,7 +65,7 @@ const SignUp = () => {
 
             <button on className={styles.signupbutton} onClick={handleSignup} >Sign Up</button>
 
-            <p style={{marginTop: '30px', marginLeft:'160px'}}>Already have an account?
+            <p >Already have an account?
              <Link to={"/login"} style={{marginLeft:'4px', textDecoration:'none', color:'seagreen'}}>Login</Link>
              </p>
 
