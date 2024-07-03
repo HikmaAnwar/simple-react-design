@@ -31,29 +31,29 @@ const Login = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.imageContainer}>
-                <img src={myImage} alt="image" />
+        <div className="flex justify-between item-center">
+            <div className="w-1/2 pt-24">
+                <img src={myImage} alt="image" width={400} height={300} className="mx-auto mt-4" />
             </div>
 
-            <div className={styles.formContainer}>
-                <h1 style={{margin:'auto', marginTop:'-50px',marginBottom:'50px', marginLeft:'200px', textDecoration:'underline', fontFamily:'-moz-initial'}}>LogIn</h1>
+            <div className="w-1/2 h-1 pt-24 mx-auto text-center mt-14">
+                <p className="text-2xl text-center">LogIn</p>
                 <input
-                    className={styles.inputemail}
+                    className="border border-gray-500 rounded-md p-1 w-2/3 my-3 mx-auto"
                     type="email"
                     placeholder="Enter email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
-                    className={styles.inputpassword}
+                    className="border border-gray-500 rounded-md p-1 w-2/3 my-3 mx-auto"
                     type="password"
                     placeholder="Enter password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className={styles.logbutton} onClick={handleLogin}>Login</button>
-                <p style={{marginTop: '30px', marginLeft:'160px'}}>
+                <button className="bg-orange-500 text-white p-2 mx-auto my-3 hover:bg-gray-400 cursor-pointer w-2/3 rounded-lg" onClick={handleLogin}>Login</button>
+                <p className="mx-auto my-3 text-center">
                     Don't have an account? <Link to={"/signup"} style={{marginLeft:'4px', textDecoration:'none', color:'seagreen'}}>Signup</Link>
                 </p>
                 <Link to="#" onClick={() => setModalIsOpen(true)} style={{marginTop: '30px', marginLeft:'201px', textDecoration:'none', color:'seagreen'}}>Forgot Password?</Link>
