@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import mySignupImage from "./login.jpg";
-import styles from "./signup.module.css";
+
 
 const SignUp = () => {
     const [username, setUsername] = useState('');
@@ -19,16 +19,16 @@ const SignUp = () => {
 
     
     return(
-        <div className={styles.container}>
+        <div className="flex justify-between item-center ">
 
-          <div className={styles.imageContainer}>
-            <img src={mySignupImage} />          
+          <div className="w-1/2 pt-24">
+            <img src={mySignupImage} width={400} height={300} className="mx-auto mt-4" />          
             </div>
 
-            <div className={styles.formContainer}>
-            <h1>Signup</h1>
+            <div className="w-1/2 h-1 pt-24 mx-auto text-center mt-14">
+            <p className="text-2xl text-center">Signup</p>
             <input
-            className={styles.inputusername}
+            className="border border-gray-500 rounded-md p-1 w-2/3 my-3 mx-auto"
             type="text"
             placeholder="Enter Username"
             value={username}
@@ -37,7 +37,7 @@ const SignUp = () => {
             />
 
             <input
-            className={styles.inputemail}
+            className="border border-gray-500 rounded-md p-1 w-2/3 mx-auto my-3"
             type="email"
             placeholder="Enter Email"
             value={email}
@@ -46,7 +46,7 @@ const SignUp = () => {
             />
 
             <input
-            className={styles.inputpassword}
+            className="border border-gray-500 rounded-md p-1 w-2/3 mx-auto my-3"
             type="password"
             placeholder="Enter password"
             value={password}
@@ -55,7 +55,7 @@ const SignUp = () => {
             />
 
             <input
-            className={styles.inputconfirmpassword}
+            className="border border-gray-500 rounded-md p-1 w-2/3 mx-auto my-3"
             type="password"
             placeholder="Confirm Password "
             value={password}
@@ -63,10 +63,10 @@ const SignUp = () => {
             
             />
 
-            <button on className={styles.signupbutton} onClick={handleSignup} >Sign Up</button>
+            <button on className="bg-orange-400 border-none cursor-pointer text-white rounded-lg p-2 w-2/3 my-3 hover:bg-gray-500" onClick={handleSignup} >Sign Up</button>
 
             <p >Already have an account?
-             <Link to={"/login"} style={{marginLeft:'4px', textDecoration:'none', color:'seagreen'}}>Login</Link>
+             <Link to={"/login"} className="mx-auto text-blue-500 ml-3 hover:text-gray-500">Login</Link>
              </p>
 
         </div>
