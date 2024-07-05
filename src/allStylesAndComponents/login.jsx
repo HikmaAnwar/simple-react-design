@@ -21,7 +21,7 @@ const Login = () => {
 
     const handleSendEmail = () => {
         if (!forgotEmail) {
-            setEmailError(true); 
+            setEmailError(false); 
         } else {
             console.log("Forgot password email sent to:", forgotEmail);
             setEmailError(false); 
@@ -60,42 +60,50 @@ const Login = () => {
             </div>
 
             <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={() => {
-                    setModalIsOpen(false);
-                    setEmailError(false); 
-                }}
-                contentLabel="Forgot Password Modal"
-                style={{
-                    content: {
-                        top: '50%',
-                        left: '50%',
-                        right: 'auto',
-                        bottom: 'auto',
-                        marginRight: '-50%',
-                        transform: 'translate(-50%, -50%)',
-                        padding: '20px',
-                        borderRadius: '8px',
-                        width: '300px'
-                    }
-                }}
-            >
-                <h2>Forgot Password</h2>
-                <input
-                    className="w-full p-2.5 m-auto my-3 box-border border-solid rounded h-fit border border-gray-500"
-                    
-                    type="email"
-                    placeholder="Enter your email"
-                    value={forgotEmail}
-                    onChange={(e) => {
-                        setForgotEmail(e.target.value);
-                        setEmailError(false); 
-                    }}
-                />
-                {emailError && <p className="text-red-500 m-auto">Please fill out this field</p>}
-                <button className="w-full text-black p-2 my-3 bg-orange-400 hover:bg-gray-400 rounded-md cursor-pointer" onClick={handleSendEmail}>Send</button>
-                <button className={styles.closebutton} onClick={() => setModalIsOpen(false)}>Close Modal</button>
-            </Modal>
+  isOpen={modalIsOpen}
+  onRequestClose={() => {
+    setModalIsOpen(false);
+    setEmailError(false);
+  }}
+  contentLabel="Forgot Password Modal"
+  className="fixed inset-0 flex items-center justify-center"
+  overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+>
+  <div className="bg-white p-5 rounded-lg w-72 transform -translate-y-1/2 -translate-x-1/2 fixed top-1/2 left-1/2">
+    <h2 className="text-center my-3">Forgot Password</h2>
+    <input
+      className="w-full p-1.5 my-3 border border-gray-500 rounded"
+      type="email"
+      placeholder="Enter your email"
+      value={forgotEmail}
+      onChange={(e) => {
+        setForgotEmail(e.target.value);
+        setEmailError(false);
+      }}
+    />
+    {emailError && <p className="text-red-500 text-center">Please fill your email</p>}
+    <button
+      className="w-full text-black p-2 my-3 bg-orange-400 hover:bg-gray-400 rounded-md"
+      onClick={() => {
+        if (!forgotEmail) {
+          setEmailError(true);
+        } else {
+          handleSendEmail();
+        }
+      }}
+    >
+      Send
+    </button>
+    <button
+      className="w-full text-black bg-orange-200 hover:bg-gray-400 p-2 my-3 rounded-md"
+      onClick={() => setModalIsOpen(false)}
+    >
+      Close Modal
+    </button>
+  </div>
+</Modal>
+
+
         </div>
     );
 };
