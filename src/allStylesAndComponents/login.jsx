@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
-import styles from "./login.module.css"; 
-import myImage from "./login.jpg"
+ import myImage from "./login.jpg"
 
 Modal.setAppElement('#root'); 
 
