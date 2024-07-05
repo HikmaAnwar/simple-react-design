@@ -59,26 +59,28 @@ const Login = () => {
             </div>
 
             <Modal
-  isOpen={modalIsOpen}
-  onRequestClose={() => {
-    setModalIsOpen(false);
-    setEmailError(false);
-  }}
-  contentLabel="Forgot Password Modal"
-  className="fixed inset-0 flex items-center justify-center"
-  overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+              isOpen={modalIsOpen}
+              onRequestClose={() => {
+                                setModalIsOpen(false);
+                                setEmailError(false);
+  }
+}
+             contentLabel="Forgot Password Modal"
+             className="fixed inset-0 flex items-center justify-center"
+             overlayClassName="fixed inset-0 bg-black bg-opacity-50"
 >
-  <div className="bg-white p-5 rounded-lg w-72 transform -translate-y-1/2 -translate-x-1/2 fixed top-1/2 left-1/2">
-    <h2 className="text-center my-3">Forgot Password</h2>
-    <input
-      className="w-full p-1.5 my-3 border border-gray-500 rounded"
-      type="email"
-      placeholder="Enter your email"
-      value={forgotEmail}
-      onChange={(e) => {
-        setForgotEmail(e.target.value);
-        setEmailError(false);
-      }}
+             <div className="bg-white p-5 rounded-lg w-72 transform -translate-y-1/2 -translate-x-1/2 fixed top-1/2 left-1/2">
+               <h2 className="text-center my-3">Forgot Password</h2>
+             <input
+                className="w-full p-1.5 my-3 border border-gray-500 rounded"
+                type="email"
+                placeholder="Enter your email"
+                value={forgotEmail}
+                onChange={(e) => {
+                            setForgotEmail(e.target.value);
+                            setEmailError(false);
+      }
+    }
     />
     {emailError && <p className="text-red-500 text-center">Please fill your email</p>}
     <button
@@ -89,18 +91,14 @@ const Login = () => {
         } else {
           handleSendEmail();
         }
-      }}
-    >
-      Send
-    </button>
+      }
+    }>Send</button>
     <button
       className="w-full text-black bg-orange-200 hover:bg-gray-400 p-2 my-3 rounded-md"
-      onClick={() => setModalIsOpen(false)}
-    >
-      Close Modal
-    </button>
-  </div>
-</Modal>
+      onClick={() => setModalIsOpen(false)}>Close Modal</button>
+            </div>
+            
+            </Modal>
 
 
         </div>
